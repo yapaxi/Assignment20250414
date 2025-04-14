@@ -40,7 +40,7 @@ dotnet_diagnostic.CS8631.severity = error
 
 dotnet_naming_rule.private_field_should_be_starts_with_underscore.severity = suggestion
 dotnet_naming_rule.private_field_should_be_starts_with_underscore.symbols = private_field
-dotnet_naming_rule.private_field_should_be_starts_with_underscore.style = starts_with_underscore
+dotnet_naming_rule.private_field_should_be_starts_with_underscore.style = camel_field
 
 # Symbol specifications
 
@@ -50,10 +50,10 @@ dotnet_naming_symbols.private_field.required_modifiers =
 
 # Naming styles
 
-dotnet_naming_style.starts_with_underscore.required_prefix = _
-dotnet_naming_style.starts_with_underscore.required_suffix = 
-dotnet_naming_style.starts_with_underscore.word_separator = 
-dotnet_naming_style.starts_with_underscore.capitalization = camel_case
+dotnet_naming_style.camel_field.required_prefix = 
+dotnet_naming_style.camel_field.required_suffix = 
+dotnet_naming_style.camel_field.word_separator = 
+dotnet_naming_style.camel_field.capitalization = camel_case
 csharp_indent_labels = one_less_than_current
 csharp_using_directive_placement = outside_namespace:silent
 csharp_prefer_simple_using_statement = true:suggestion
