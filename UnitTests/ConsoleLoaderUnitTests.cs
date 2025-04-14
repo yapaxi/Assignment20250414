@@ -20,7 +20,7 @@ namespace UnitTests
                     Results = HttpUtility.ParseQueryString(req.RequestUri!.Query)["page"] switch
                     {
                         "1" => [new CharacterView() { Name = "1", Status = "Alive" }],
-                        "2" => [new CharacterView() { Name = "2", Status = "Alive" }],  
+                        "2" => [new CharacterView() { Name = "2", Status = "Alive" }],
                         "3" => [new CharacterView() { Name = "3", Status = "Alive" }],
                     }
                 }))
@@ -39,7 +39,7 @@ namespace UnitTests
         }
     }
 
-    public class FuncHttpMessageHandler(Func<HttpRequestMessage, HttpResponseMessage> func): HttpMessageHandler
+    public class FuncHttpMessageHandler(Func<HttpRequestMessage, HttpResponseMessage> func) : HttpMessageHandler
     {
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {

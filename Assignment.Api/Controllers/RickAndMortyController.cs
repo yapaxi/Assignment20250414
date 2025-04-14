@@ -1,15 +1,12 @@
-using Assignment.LoaderConsole;
 using Assignment.Contracts.Input;
+using Assignment.LoaderConsole;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Assignment.Api.Controllers;
 
 [ApiController]
 public class RickAndMortyController(
-    ILogger<RickAndMortyController> logger, 
-    IRickAndMortyService rickAndMortyService, 
-    StatisticsContext statisticsContext
+    IRickAndMortyService rickAndMortyService
 ) : ControllerBase
 {
     [HttpPost]
@@ -19,8 +16,8 @@ public class RickAndMortyController(
         var character = await rickAndMortyService.AddCharacter(newCharacter);
 
         return CreatedAtAction(
-            nameof(GetCharacter), 
-            routeValues: new { id = character.Id }, 
+            nameof(GetCharacter),
+            routeValues: new { id = character.Id },
             value: character
         );
     }

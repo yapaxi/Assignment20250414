@@ -1,7 +1,6 @@
 using Assignment.App.Data;
 using Assignment.LoaderConsole;
 using LazyCache;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -59,7 +58,7 @@ var config = builder.Configuration;
 
     var cacheName = $"data-cache-for-{nameof(RickAndMortyService)}";
 
-    builder.Services.AddKeyedSingleton<IAppCache>(cacheName, (q,_) => new LazyCache.CachingService());
+    builder.Services.AddKeyedSingleton<IAppCache>(cacheName, (q, _) => new LazyCache.CachingService());
     builder.Services.AddScoped<IRickAndMortyService>(q => new RickAndMortyService(
         q.GetRequiredService<IRepository>(),
         q.GetRequiredKeyedService<IAppCache>(cacheName),

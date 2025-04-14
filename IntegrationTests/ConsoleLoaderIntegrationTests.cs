@@ -1,7 +1,4 @@
 ﻿using Assignment.LoaderConsole.Clients;
-using Assignment.LoaderConsole.Clients.Models;
-using System.Text.Json;
-using System.Web;
 
 namespace UnitTests
 {

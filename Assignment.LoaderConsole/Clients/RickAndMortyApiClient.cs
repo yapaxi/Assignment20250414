@@ -1,8 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using System.Text.Json;
+﻿using Assignment.LoaderConsole.Clients.Models;
 using System.Net.Http.Json;
-using System.Text.Json.Serialization;
-using Assignment.LoaderConsole.Clients.Models;
 
 namespace Assignment.LoaderConsole.Clients;
 

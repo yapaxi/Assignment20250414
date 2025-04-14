@@ -1,6 +1,5 @@
 ﻿using Assignment.App.Data;
 using Assignment.LoaderConsole.Clients;
-using Assignment.LoaderConsole.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -143,7 +142,7 @@ class NullLogger : ILogger<RickAndMortyApiClient>
     }
 }
 
-class FixedOptions<T>: IOptions<T> where T: class
+class FixedOptions<T> : IOptions<T> where T : class
 {
     public required T Value { get; init; }
 }

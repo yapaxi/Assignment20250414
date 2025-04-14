@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assignment.LoaderConsole
+﻿namespace Assignment.LoaderConsole
 {
     public class StatisticsContext
     {
@@ -12,7 +6,7 @@ namespace Assignment.LoaderConsole
 
         internal void RegisterDbCall()
         {
-            Interlocked.Increment(ref dbCallsCount);    
+            Interlocked.Increment(ref dbCallsCount);
         }
 
         public bool IsFromDatabase => dbCallsCount > 0;

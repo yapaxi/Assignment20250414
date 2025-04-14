@@ -1,8 +1,6 @@
 ﻿using Assignment.LoaderConsole;
 using Assignment.LoaderConsole.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.Extensions.Options;
 
 namespace Assignment.App.Data;
 
